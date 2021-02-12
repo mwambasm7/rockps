@@ -1,10 +1,73 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>Rock Paper Scissors</title>
-    </head>>
+    </head>
     <body>
         <script>
-            alert("This is a Game App");
+           
+            let x = 0;
+            let y ="";
+            
+            function computerPlay(){
+                x = Math.random()*10;
+                
+                if(x<=3){
+                    y ="rock";
+                }else if(x>3 && x <=6){
+                    y ="paper";
+                }else{
+                    y ="scissors";
+                }
+               
+                return y;
+                    
+            }
+           
+            const playerSelection = "rock";
+            const computerSelection = computerPlay();
+
+            let gameResult ="";
+
+            console.log(playRound(playerSelection,computerSelection));
+
+function playRound(playerSelection,computerSelection)
+{
+    if(playerSelection == 'rock' && computerSelection == 'paper')
+    {
+
+        console.log('computer :'+ y);
+        gameResult="You Loose! Paper beats Rock";
+    }else if(playerSelection == 'rock' && computerSelection == 'scissors')
+    {
+        console.log('computer :'+ y);
+        gameResult="You Win! Rock beats Scissors";
+    }else if(playerSelection == 'paper' && computerSelection == 'rock')
+    {
+        console.log('computer :'+ y);
+        gameResult="You Win! Paper beats Rock";
+    }else if(playerSelection == 'paper' && computerSelection == 'scissors')
+    {
+        console.log('computer :'+ y);
+        gameResult="You Loose! Scissors beats Paper";
+    }else if(playerSelection == 'scissors' && computerSelection == 'rock')
+    {
+        console.log('computer :'+ y);
+        gameResult="You Loose! Rock beats Scissors";
+    }else if(playerSelection == 'scissors' && computerSelection == 'paper')
+    {
+        console.log('computer :'+ y);
+        gameResult="You Win! Scissors beats Paper";
+    }else{
+        console.log('computer :'+ y);
+        gameResult="oops! Play Again";
+    }
+    return gameResult;
+}
+
+
+
         </script>
     </body>
 </html>
